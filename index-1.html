@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#120b20">
+<title>MULTI VENDAS G|K — Loja Digital</title>
+<style>
+:root{--bg:#090711;--panel:#151020;--panel2:#1d1530;--gold:#8cff35;--gold2:#bdff86;--muted:#b7afc5;--line:rgba(140,255,53,.22);--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 12% -10%,rgba(135,55,220,.28),transparent 42%),radial-gradient(ellipse at 90% 10%,rgba(91,255,35,.10),transparent 34%),var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(9,9,11,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.5px}.brand span{color:var(--gold)}
+nav{display:flex;gap:25px;color:#d8d3c9;font-size:14px}
+nav a:hover{color:var(--gold2)}
+.pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);color:#17120a;background:linear-gradient(135deg,#caff9f,#8cff35);padding:11px 18px;border-radius:999px;font-weight:800;font-size:14px;box-shadow:0 8px 30px rgba(140,255,53,.18);transition:.2s}
+.pill:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.hero{padding:92px 0 76px;text-align:center}
+.eyebrow{display:inline-block;color:var(--gold2);border:1px solid var(--line);background:rgba(140,255,53,.07);padding:7px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}
+h1{ text-shadow:0 0 42px rgba(140,255,53,.07);font-size:clamp(42px,8vw,76px);line-height:1.03;letter-spacing:-3px;margin:22px auto 18px;max-width:850px}
+h1 span,.gold{background:linear-gradient(100deg,#d7ffb8 0%,#8cff35 48%,#43c91b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:610px;margin:0 auto 28px;color:var(--muted);font-size:17px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.secondary{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.16);padding:11px 18px;border-radius:999px;color:#eee;font-weight:700;font-size:14px}
+.secondary:hover{border-color:var(--gold);color:var(--gold2)}
+.trust{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:44px;color:#c5bda9;font-size:13px}
+.trust span:before{content:"✦";color:var(--gold);margin-right:8px}
+section{padding:65px 0}
+.section-head{text-align:center;margin-bottom:30px}
+.section-head small{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(28px,5vw,40px);margin:8px 0;color:#fff;letter-spacing:-1px}
+.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,rgba(139,69,220,.13),rgba(140,255,53,.025) 55%,rgba(255,255,255,.012)),var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px;min-height:245px;transition:.22s}
+.card:hover{transform:translateY(-5px);border-color:rgba(232,189,85,.55);box-shadow:0 18px 45px rgba(0,0,0,.35)}
+.icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:rgba(140,255,53,.10);border:1px solid var(--line);font-size:25px}
+.card h3{font-size:20px;margin:18px 0 7px}.card p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.card a{color:var(--gold2);font-size:13px;font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{padding:22px;border-radius:18px;background:var(--panel);border:1px solid rgba(255,255,255,.08)}
+.num{color:var(--gold);font-weight:900;font-size:13px;letter-spacing:1px}
+.step h3{margin:8px 0 5px;font-size:17px}.step p{margin:0;color:var(--muted);font-size:14px}
+.notice{max-width:850px;margin:0 auto;background:linear-gradient(120deg,rgba(139,69,220,.20),rgba(140,255,53,.08));border:1px solid var(--line);border-radius:22px;padding:30px;text-align:center}
+.notice p{color:#c8c1b4;margin:8px 0 20px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#938e84;font-size:13px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){nav{display:none}.hero{padding:72px 0 55px}.cards,.steps{grid-template-columns:1fr}.card{min-height:auto}section{padding:48px 0}.wrap{width:min(100% - 30px,600px)}h1{letter-spacing:-2px}.trust{gap:12px 20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">MULTI VENDAS <span>G|K</span></a>
+    <nav><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#comprar">Como comprar</a></nav>
+    <a class="pill" href="https://discord.gg/WwM9za7ex" target="_blank" rel="noopener">Entrar no Discord ↗</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <span class="eyebrow">✦ Sua loja digital</span>
+      <h1>O que você procura,<br><span>em um só lugar.</span></h1>
+      <p>Bem-vindo à MULTI VENDAS G|K! Confira nossos produtos digitais, consulte a disponibilidade e faça seu pedido com o atendimento da nossa equipe.</p>
+      <div class="actions">
+        <a class="pill" href="#produtos">Explorar produtos ↓</a>
+        <a class="secondary" href="https://discord.gg/WwM9za7ex" target="_blank" rel="noopener">Falar com a equipe</a>
+      </div>
+      <div class="trust"><span>Atendimento pelo Discord</span><span>Consulte a disponibilidade</span><span>Suporte da equipe</span></div>
+    </div>
+  </section>
+
+  <section id="produtos">
+    <div class="wrap">
+      <div class="section-head"><small>Catálogo</small><h2>Nossos <span class="gold">produtos</span></h2><p>Escolha uma categoria e consulte as opções disponíveis.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">🎮</div><h3>Contas Roblox</h3><p>Contas Roblox com opções variadas. Consulte nosso atendimento para conferir o estoque e os detalhes de cada conta.</p><a href="https://discord.gg/WwM9za7ex" target="_blank" rel="noopener">Consultar disponibilidade ↗</a></article>
+        <article class="card"><div class="icon">📱</div><h3>Seguidores</h3><p>Serviços relacionados a seguidores para Instagram e TikTok. Consulte condições, prazos e opções disponíveis.</p><a href="https://discord.gg/WwM9za7ex" target="_blank" rel="noopener">Consultar opções ↗</a></article>
+        <article class="card"><div class="icon">📺</div><h3>Telas de streaming</h3><p>Consulte as opções de telas de streaming disponíveis, valores e condições diretamente com nossa equipe.</p><a href="https://discord.gg/WwM9za7ex" target="_blank" rel="noopener">Consultar opções ↗</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="wrap">
+      <div class="section-head"><small>Simples e direto</small><h2>Como <span class="gold">comprar</span></h2><p>Faça seu pedido com o suporte da nossa equipe.</p></div>
+      <div class="steps">
+        <article class="step"><div class="num">PASSO 01</div><h3>Entre no nosso Discord</h3><p>Acesse o servidor oficial da MULTI VENDAS G|K.</p></article>
+        <article class="step"><div class="num">PASSO 02</div><h3>Abra um ticket</h3><p>Escolha a categoria de compra e informe o produto desejado.</p></article>
+        <article class="step"><div class="num">PASSO 03</div><h3>Finalize com a equipe</h3><p>Tire suas dúvidas, confira os detalhes e receba as orientações para concluir seu pedido.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="notice">
+        <span class="eyebrow">MULTI VENDAS G|K</span>
+        <h2>Pronto para fazer seu <span class="gold">pedido?</span></h2>
+        <p>Entre no nosso Discord e fale com a equipe. Estamos prontos para ajudar você a encontrar o que procura.</p>
+        <a class="pill" href="https://discord.gg/WwM9za7ex" target="_blank" rel="noopener">Acessar servidor ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><strong class="brand">MULTI VENDAS <span>G|K</span></strong><span>© 2026 MULTI VENDAS G|K. Todos os direitos reservados.</span></div></footer>
+</body>
+</html>
